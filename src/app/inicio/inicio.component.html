@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                InicioSesión
+            </div>
+            <div class="card-body">
+                <form [formGroup]= "usuario">
+                    <div class="form-group">
+                        <input 
+                        type="text"  
+                        placeholder="correo"
+                        formControlName="correo"
+                        required >
+
+                        <small *ngIf= "formularioReactivo.correo?.errors?.required && formularioReactivo.correo.touched">
+                            El correo es requerido
+                        </small>
+
+                    
+                        <input 
+                         type="password"  
+                         placeholder="password"
+                         formControlName="password"
+                         required >
+
+                         <small *ngIf= "formularioReactivo.password?.errors?.required && formularioReactivo.password.touched">
+                            La contraseña es requerida
+                        </small>
+
+                    
+                        <button 
+                        type="submit" 
+                        class="btn btn-primary  btn-block"
+                        (click)="inicioSesion()"
+                        [disabled]= "!usuario.valid">
+                        InicioSesión
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

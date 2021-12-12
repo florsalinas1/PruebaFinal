@@ -1,0 +1,33 @@
+
+  
+  
+  <div class="container">
+      <div>
+          <h2>Lista de Usuarios Registrados</h2><br>
+      </div>
+      <div>
+        <table class="table">
+          <thead>
+            <tr> 
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Teléfono</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let datos_listausuarios of datos_Usuario">
+              <td>{{datos_listausuarios.nombre}}</td>
+              <td>{{datos_listausuarios.apellido}}</td>
+              <td>{{datos_listausuarios.telefono}}</td>
+              <td>{{datos_listausuarios.correo}}</td>
+              <td>{{datos_listausuarios.tipo}}</td>
+              <td>{{datos_listausuarios.estado}}</td>
+              
+              
+          </tbody>
+        </table>
+      </div>
+  </div>

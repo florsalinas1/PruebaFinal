@@ -1,0 +1,106 @@
+
+
+<div class="col-md-4 mx-auto">
+    <h1>Registro de Usuario</h1>
+    <form [formGroup]= "usuario" >
+
+    <div class="form-group">
+        <label>Nombre:</label>
+        <input
+        type="text"
+        placeholder="Nombre"
+        formControlName="nombre"
+        required><br>
+
+        <small *ngIf= "formularioReactivo.nombre?.errors?.required && formularioReactivo.nombre.touched">
+            El nombre es requerido
+        </small>
+
+        <label>Apellido:</label>
+        <input 
+        type="text"
+        placeholder="Apellido"
+        formControlName="apellido"
+        required><br>
+
+        <small *ngIf= "formularioReactivo.apellido?.errors?.required && formularioReactivo.apellido.touched">
+            El apellido es requerido
+        </small>
+
+        <label>Teléfono:</label>
+        <input
+        type="text"
+        placeholder="Teléfono"
+        formControlName="telefono"
+        required><br>
+
+        <small *ngIf= "formularioReactivo.telefono?.errors?.required && formularioReactivo.telefono.touched">
+            El teléfono es requerido
+        </small>
+
+        <label>Correo:</label>
+        <input 
+        type="text"
+        placeholder="Correo"
+        formControlName="correo"
+        required><br>
+
+        <small *ngIf= "formularioReactivo.correo?.errors?.required && formularioReactivo.correo.touched">
+            El usuario es requerido
+        </small>
+        <label>tipo:</label>
+        <input 
+        type="number"
+        placeholder="Tipo"
+        formControlName="tipo"
+        ><br>
+        <small *ngIf= "formularioReactivo.tipo?.errors?.required && formularioReactivo.tipo.touched">
+            El tipo de usuario es requerido
+        </small>
+        
+
+        <label>Estado:</label>
+        <input
+        type="number"
+        placeholder="Estado"
+        formControlName="estado"
+        ><br>
+        <small *ngIf= "formularioReactivo.correo?.estado?.required && formularioReactivo.estado.touched">
+            El estado de usuario es requerido
+        </small>
+        
+
+
+        <label>Password:</label>
+        <input
+        type="text"
+        placeholder="Password"
+        formControlName="password"
+        required><br>
+
+        <small *ngIf= "formularioReactivo.password?.errors?.required && formularioReactivo.password.touched">
+            La contraseña es requerida
+        </small>
+
+        
+
+        <div class="form-group">
+            <div>
+                <button 
+                class="btn btn-primary"
+                type="submit"
+                (click)="enviarDatos()"
+                [disabled]= "!usuario.valid"
+                >Enviar</button>
+            </div>
+
+        </div>
+        
+    </div>
+
+</form> 
+
+</div>
+
+
+

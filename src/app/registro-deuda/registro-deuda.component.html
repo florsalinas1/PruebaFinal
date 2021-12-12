@@ -1,0 +1,98 @@
+
+<div class="col-md-4 mx-auto">
+    <h1>Registro de Deuda</h1>
+    <form [formGroup]= "reg_deuda">
+
+    <div class="form-group">
+        <label>Tipo:</label>
+        <input
+        type="number"
+        placeholder="Tipo"
+        formControlName="tipo"
+        ><br>
+        <small *ngIf= "formularioReactivo.tipo?.errors?.required && formularioReactivo.tipo.touched">
+            El tipo es requerido
+        </small>
+
+        <label>Comentario:</label>
+        <input 
+        type="text"
+        placeholder="Comentario"
+        formControlName="comentario"
+        ><br>
+
+        <small *ngIf= "formularioReactivo.comentario?.errors?.required && formularioReactivo.comentario.touched">
+            El comentario es requerido
+        </small>
+
+       <label>Valor:</label>
+        <input
+        type="number"
+        placeholder="Valor"
+        formControlName="valor"
+        ><br>
+        <small *ngIf= "formularioReactivo.valor?.errors?.required && formularioReactivo.valor.touched">
+            El valor es requerido
+        </small>
+
+        <label>Estado:</label>
+        <input 
+        type="number"
+        placeholder="Estado (0,1)"
+        formControlName="estado"
+        ><br>
+
+        <small *ngIf= "formularioReactivo.estado?.errors?.required && formularioReactivo.estado.touched">
+            El estado es requerido
+        </small>
+
+        <label>Fecha de Creación:</label>
+        <input 
+        type="datetime"
+        placeholder="Fecha_creación"
+        formControlName="fecha_creacion"
+        ><br>
+
+        <small *ngIf= "formularioReactivo.fecha_creacion?.errors?.required && formularioReactivo.fecha_creacion.touched">
+            La fecha es requerida
+        </small>
+
+        <label>usuarioIdd:</label>
+        <input 
+        type="number"
+        placeholder="usuarioId (0,1)"
+        formControlName="usuarioId"
+        ><br>
+
+        <small *ngIf= "formularioReactivo.usuarioId?.errors?.required && formularioReactivo.usuarioId.touched">
+            El Id es requerido
+        </small>
+
+        <label>InvolucradoId:</label>
+        <input 
+        type="number"
+        placeholder="InvolucradoId"
+        formControlName="involucradoId"
+        ><br>
+
+        <small *ngIf= "formularioReactivo.involucradoId?.errors?.required && formularioReactivo.involucradoId.touched">
+            El Id es requerido
+        </small>
+        
+        <div class="form-group">
+            <div>
+                <button 
+                class="btn btn-primary"
+                type="submit"
+                (click)="enviarDeuda()"
+                
+                >Enviar</button>
+            </div>
+
+        </div>
+        
+    </div>
+
+</form> 
+
+</div>
