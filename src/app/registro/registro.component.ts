@@ -38,9 +38,7 @@ export class RegistroComponent implements OnInit {
         
         if(response.usuario){
           alert("Usuario creado correctamente");
-          console.log(response),
-          console.log("Hola")
-         
+          console.log(response)
         }else{
           alert("Usuario no creado")
         }

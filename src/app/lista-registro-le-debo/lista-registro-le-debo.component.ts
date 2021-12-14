@@ -8,6 +8,7 @@ import { DeudaService } from '../servicios/deuda.service';
 })
 export class ListaRegistroLeDeboComponent implements OnInit {
   datos_LeDebo:any;
+ 
 
   constructor(private servicioDeuda: DeudaService) { }
 
@@ -16,15 +17,21 @@ export class ListaRegistroLeDeboComponent implements OnInit {
   }
 
   obtenerDatosLeDebo(){
-    this.servicioDeuda.obtener_RegistroLeDebo().subscribe(
+    
+    this.servicioDeuda.obtener_RegistroLeDebo(12,0).subscribe(
       (response:any) =>{
         this.datos_LeDebo = response.registro_deudas;
         console.log(this.datos_LeDebo)
       },
       error => {
-        alert("Hay errores")
+        alert("Se encontraron errores")
       }
     )
   }
-
 }
+  
+  
+
+
+
+

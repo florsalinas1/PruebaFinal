@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeudaService } from '../servicios/deuda.service';
+import { UsuariosService } from '../servicios/usuarios.service';
 
 @Component({
   selector: 'app-lista-registro-me-debe',
@@ -16,7 +17,7 @@ export class ListaRegistroMeDebeComponent implements OnInit {
   }
 
   obtenerDatosMeDebe(){
-    this.servicioDeuda.obtener_RegistroMeDebe().subscribe(
+    this.servicioDeuda.obtener_RegistroMeDebe(11,1).subscribe(
       (response:any) =>{
         this.datos_MeDebe = response.registro_deudas;
         console.log(this.datos_MeDebe)

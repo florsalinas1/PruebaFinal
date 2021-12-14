@@ -15,11 +15,15 @@ export class DeudaService {
     console.log(registro_deuda);
   }
 
-  obtener_RegistroLeDebo(){
-    return this.http.get(`${this.url_backend}/obtener-registro-deuda-deben/:42/:0`)
+  obtener_RegistroLeDebo(id_usuario:any,tipo:any){
+    console.log(id_usuario,tipo)
+    return this.http.get(`${this.url_backend}/obtener-registro-deuda-deben/${id_usuario}/${tipo}`)
+    
   }
 
-  obtener_RegistroMeDebe(){
-    return this.http.get(`${this.url_backend}/obtener-registro-deuda-pagar/:id_usuario/:tipo`)
+ 
+
+  obtener_RegistroMeDebe(id_usuario:any,tipo:any){
+    return this.http.get(`${this.url_backend}/obtener-registro-deuda-pagar/${id_usuario}/${tipo}`)
   }
 }

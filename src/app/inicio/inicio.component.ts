@@ -28,9 +28,11 @@ export class InicioComponent implements OnInit {
   }
 
   inicioSesion(){
+    console.log(this.usuario)
     this.serviceAutenticacion.crear_datosAutenticacion(this.usuario).subscribe(
       
       (response:any)=>{
+        console.log(response)
         
         if(response.inicio_sesion){
           alert("Inicio de sesión correcto");
