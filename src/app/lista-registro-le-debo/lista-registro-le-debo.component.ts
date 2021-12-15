@@ -18,7 +18,7 @@ export class ListaRegistroLeDeboComponent implements OnInit {
 
   obtenerDatosLeDebo(){
     
-    this.servicioDeuda.obtener_RegistroLeDebo(12,0).subscribe(
+    this.servicioDeuda.obtener_RegistroLeDebo(40,0).subscribe(
       (response:any) =>{
         this.datos_LeDebo = response.registro_deudas;
         console.log(this.datos_LeDebo)
